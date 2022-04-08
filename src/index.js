@@ -7,8 +7,8 @@ import App from './App';
 import Header from './components/header';
 import Footer from './components/footer';
 import Register from './components/register';
-import Login from './components/login';
-import Logout from './components/logout';
+import SignIn from './components/login';
+import SignOut from './components/logout';
 //import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,9 +19,9 @@ const routing = (
 			<Header />
 			<Routes>
 				<Route exact path="/" element={<App />} />
-				<Route path="/register" component={Register} />
-				<Route path="/login" component={Login} />
-				<Route path="/logout" component={Logout} />
+				<Route path="/register" element={<Register />} />
+				<Route path="/login" element={<SignIn />} />
+				<Route path="/logout" element={<SignOut />} />
 			</Routes>
 			<Footer />
 		</React.StrictMode>
