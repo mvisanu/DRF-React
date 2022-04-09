@@ -9,6 +9,8 @@ import Footer from './components/footer';
 import Register from './components/register';
 import SignIn from './components/login';
 import SignOut from './components/logout';
+import Single from './components/single';
+import Search from './components/search';
 //import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,6 +24,8 @@ const routing = (
 				<Route path="/register" element={<Register />} />
 				<Route path="/login" element={<SignIn />} />
 				<Route path="/logout" element={<SignOut />} />
+				<Route path="/post/:slug" element={<Single />} />
+				<Route path="/search" element={<Search />} />
 			</Routes>
 			<Footer />
 		</React.StrictMode>
