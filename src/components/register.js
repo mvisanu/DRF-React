@@ -57,13 +57,13 @@ export default function Register() {
 		console.log(formData);
 
 		axiosInstance
-			.post(`user/create/`, {
+			.post(`user/register/`, {
 				email: formData.email,
 				user_name: formData.username,
 				password: formData.password,
 			})
 			.then((res) => {
-				navigate.push('/login');
+				navigate('/login');
 				console.log(res);
 				console.log(res.data);
 			});
@@ -135,7 +135,7 @@ export default function Register() {
 					>
 						Sign Up
 					</Button>
-					<Grid container justify="flex-end">
+					<Grid container justifyContent="flex-end">
 						<Grid item>
 							<Link href="#" variant="body2">
 								Already have an account? Sign in
